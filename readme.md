@@ -3,13 +3,13 @@
 
 # rollup-plugin-skypin
 
-🍣 A Rollup plugin which converts NodeJS imports into URL's from [skypack.dev](https://skypack.dev). Based on [`skypin`](https://github.com/marshallcb/skypin).
+🍣  A Rollup plugin which converts NodeJS imports into URL's from [skypack.dev](https://skypack.dev). Based on [`skypin`](https://github.com/marshallcb/skypin).
 
 ## Install
 
 Using npm:
 
-```console
+```sh
 npm install rollup-plugin-skypin --save-dev
 ```
 ## Usage
