@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "rollup-plugin-skypin",
   "repository": "MarshallCB/rollup-plugin-skypin",
   "description": "Rollup plugin to convert dependencies into browser-friendly imports from skypack.dev",
