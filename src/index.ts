@@ -4,6 +4,7 @@ let default_options = {
   pinned: true,
   minified: true,
   relative_external: false,
+  web_external: true,
   shouldReplace: ()=>true
 }
 
@@ -11,6 +12,7 @@ type Options = {
   minified: boolean,
   pinned: boolean,
   relative_external: boolean,
+  web_external: boolean,
   shouldReplace: (module_id:string)=>boolean
 }
 
