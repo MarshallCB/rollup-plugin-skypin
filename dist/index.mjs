@@ -4,6 +4,7 @@ let default_options = {
     pinned: true,
     minified: true,
     relative_external: false,
+    web_external: true,
     shouldReplace: () => true
 };
 function skypin(options) {
@@ -16,11 +17,13 @@ function skypin(options) {
                 }
             }
             else if (id.startsWith('https://') || id.startsWith('http://')) {
-                return { id, external: true };
+                if (options.web_external) {
+                    return { id, external: true };
+                }
             }
             else if (options.shouldReplace(id)) {
                 return {
-                    id: await skypin$1(id, { minified: options.minified, pinned: options.pinned }),
+                    id: await skypin$1(id, { min: options.minified, pin: options.pinned }),
                     external: true
                 };
             }

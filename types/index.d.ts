@@ -2,6 +2,7 @@ declare type Options = {
     minified: boolean;
     pinned: boolean;
     relative_external: boolean;
+    web_external: boolean;
     shouldReplace: (module_id: string) => boolean;
 };
 export declare function skypin(options: Options): {

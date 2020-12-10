@@ -25,10 +25,12 @@ export function skypin(options:Options){
           return { id, external: true }
         }
       } else if(id.startsWith('https://') || id.startsWith('http://')){
-        return { id, external: true }
+        if(options.web_external){
+          return { id, external: true }
+        }
       } else if(options.shouldReplace(id)){
         return {
-          id: await sky(id, { minified: options.minified, pinned: options.pinned}),
+          id: await sky(id, { min: options.minified, pin: options.pinned}),
           external: true
         }
       }
