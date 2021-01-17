@@ -58,7 +58,7 @@ The options object can be used to customize the behavior of this plugin
 
 - `options.minified`: `boolean` (defaults to `true`). Based on normal vs. minified in skypack lookup page 
 - `options.pinned`: `boolean` (default to `true`). Whether to use Pinned url's (recommended for production). Read more [here](https://docs.skypack.dev/skypack-cdn/api-reference/pinned-urls-optimized)
-- `options.shouldReplace()`: `function(id) => boolean` (default to `()=>true`). Customize which module ID's to replace using skypin. 
+- `options.shouldReplace()`: `function(id) => boolean|string` (default to `()=>true`). Customize which module ID's to replace using skypin. If a string is returned, it will be used as id.
 - `options.relative_external`: `boolean` (defaults to `false`). Whether to return relative exports (ex: `./supporting_file.js`) as `external`
 - `options.web_external`: `boolean` (defaults to `true`). Whether to mark existing web imports (starting with "https://" or "http://") as `external` to be ignored.
 

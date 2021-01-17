@@ -13,7 +13,7 @@ type Options = {
   pinned: boolean,
   relative_external: boolean,
   web_external: boolean,
-  shouldReplace: (module_id:string)=>boolean
+  shouldReplace: (module_id:string)=>(boolean|string)
 }
 
 export function skypin(options:Options){
@@ -29,8 +29,9 @@ export function skypin(options:Options){
           return { id, external: true }
         }
       } else if(options.shouldReplace(id)){
+        let custom = options.shouldReplace(id)
         return {
-          id: await sky(id, { min: options.minified, pin: options.pinned}),
+          id: await sky(typeof custom === 'string' ? custom : id, { min: options.minified, pin: options.pinned}),
           external: true
         }
       }

@@ -26,8 +26,9 @@ function skypin(options) {
                 }
             }
             else if (options.shouldReplace(id)) {
+                let custom = options.shouldReplace(id);
                 return {
-                    id: await skypin$1.skypin(id, { min: options.minified, pin: options.pinned }),
+                    id: await skypin$1.skypin(typeof custom === 'string' ? custom : id, { min: options.minified, pin: options.pinned }),
                     external: true
                 };
             }
