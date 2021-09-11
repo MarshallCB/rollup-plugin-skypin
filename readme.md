@@ -12,6 +12,13 @@ Using npm:
 ```sh
 npm install rollup-plugin-skypin --save-dev
 ```
+
+Using yarn:
+
+```sh
+yarn add -D rollup-plugin-skypin
+```
+
 ## Usage
 
 Suppose an input file containing the snippet below exists at `src/index.js`, and attempts to load `hueman`:
