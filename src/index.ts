@@ -5,7 +5,7 @@ let default_options = {
   minified: true,
   relative_external: false,
   web_external: true,
-  shouldReplace: () => true
+  shouldReplace: (_id) => true
 }
 
 type Options = {

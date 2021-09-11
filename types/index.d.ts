@@ -1,11 +1,26 @@
 export declare type Options = {
-    minified: boolean;
-    pinned: boolean;
-    relative_external: boolean;
-    web_external: boolean;
-    shouldReplace: (module_id: string) => (boolean | string);
+    /**
+     * @default true
+     */
+    minified?: boolean;
+    /**
+     * @default true
+     */
+    pinned?: boolean;
+    /**
+     * @default false
+     */
+    relative_external?: boolean;
+    /**
+     * @default true
+     */
+    web_external?: boolean;
+    /**
+     * @default (_id) => true
+     */
+    shouldReplace?: (module_id: string) => (boolean | string);
 };
-export declare function skypin(options: Options): {
+export declare function skypin(options?: Options): {
     name: string;
     resolveId(id: string): Promise<{
         id: string;
