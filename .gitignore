@@ -3,4 +3,4 @@ node_modules
 *lock*
 *.log
 .env
-dist/
+dist

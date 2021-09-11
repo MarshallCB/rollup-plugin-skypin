@@ -1,4 +1,4 @@
-declare type Options = {
+export declare type Options = {
     minified: boolean;
     pinned: boolean;
     relative_external: boolean;
