@@ -17,8 +17,8 @@ let default_options: Options = {
 }
 
 
-export function skypin(options: Partial<Options> = {}) {
-  options = { ...default_options, ...options } as Options
+export function skypin(opts: Partial<Options> = {}) {
+  const options = { ...default_options, ...opts } as Options
   return {
     name: 'skypin',
     async resolveId(id: string) {
