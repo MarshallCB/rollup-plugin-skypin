@@ -1,5 +1,5 @@
 {
-  "version": "1.1.2",
+  "version": "1.1.3",
   "name": "rollup-plugin-skypin",
   "repository": "MarshallCB/rollup-plugin-skypin",
   "description": "Rollup plugin to convert dependencies into browser-friendly imports from skypack.dev",
@@ -18,6 +18,9 @@
     "email": "hey@m4r.sh",
     "url": "https://m4r.sh"
   },
+  "contributors": [
+    "not_existing"
+  ],
   "module": "dist/index.mjs",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
